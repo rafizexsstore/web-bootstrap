@@ -1,0 +1,429 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;1,300;1,800&display=swap");
+
+/* Reset and global styles */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans", sans-serif;
+    box-sizing: border-box;
+}
+
+/* Navbar */
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+}
+
+nav img {
+    height: 39px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #0053ba;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+nav a:hover {
+    color: #5e90cc;
+}
+
+.offcanvas {
+    visibility: visible !important;
+}
+
+/* Header */
+header {
+    background: url('img/bg-banner.webp') no-repeat center center/cover;
+    width: 100%;
+    height: 100vh;
+}
+
+.banner-container {
+    width: 60%;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    flex-direction: column;
+    align-items: center;
+}
+
+.text-banner {
+    text-align: center;
+}
+
+.text-banner h1 {
+    font-size: 50px;
+    color: #0053ba;
+}
+
+.text-banner p {
+    font-size: 20px;
+    padding: 15px 0;
+}
+
+.text-banner button {
+    padding: 15px 30px;
+    background: linear-gradient(45deg, #0053ba, #003d8f);
+    border: none;
+    border-radius: 50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.text-banner button:hover {
+    background: linear-gradient(45deg, #1981ff, #3a34ff);
+    box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.4);
+    transform: translateY(-5px);
+}
+
+.text-banner button::before {
+    content: '';
+    position: absolute;
+    left: -100%;
+    top: 0;
+    width: 300%;
+    height: 300%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
+    transition: all 0.6s ease;
+}
+
+.text-banner button:hover::before {
+    left: 100%;
+}
+
+.text-banner button:active {
+    transform: translateY(0);
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Tentang Kami */
+.tentang-kami {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('img/bg-about.webp') no-repeat center center;
+    background-size: cover;
+    text-align: left;
+}
+
+.tentang-kami img {
+    max-width: 50%;
+}
+
+.tentang-kami article {
+    padding-left: 50px;
+}
+
+.tentang-kami h1 {
+    font-size: 34px;
+}
+
+.tentang-kami p {
+    font-size: 20px;
+    color: #645f5f;
+    margin-top: 8px;
+    font-weight: 500;
+}
+
+/* Visi Misi */
+.visi-misi {
+    background: url('file_pendukung2/bg-visi.webp') no-repeat center center;
+    min-height: 100vh;
+    background-size: cover;
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+
+.visi-misi img {
+    width: 100%;
+    max-width: 400px;
+}
+
+.visi-misi .icon {
+    height: 50px;
+    width: 50px;
+}
+
+.visi-misi ul {
+    list-style-image: url('file_pendukung2/icons/arrow-right-icon.png');
+}
+
+.visi-misi li {
+    font-size: 22px;
+    padding: 10px 8px;
+    letter-spacing: .5px;
+    font-weight: 600;
+}
+
+/* Nilai */
+.nilai {
+    height: 100vh;
+    background: url('file_pendukung2/BG.webp') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.heading-nilai span {
+    color: #ffaa00;
+}
+
+.heading-nilai h1 {
+    color: #0072ff;
+}
+
+.nilai p {
+    font-weight: 500;
+    color: #504d4d;
+}
+
+/* Card Styling */
+.nilai .card {
+    background-color: #0072ff;
+    cursor: pointer;
+    color: #fff;
+    width: 200px;
+    height: 280px;
+    border-radius: 20px;
+    transition: all 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 30px;
+    position: relative;
+}
+
+/* Default Icon Styling */
+.nilai .card img {
+    width: 50px;
+    height: 50px;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+/* Hover Effects */
+.nilai .card:hover {
+    transform: scale(1.05);
+    background-color: #fff;
+    color: #0072ff;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+.nilai .card:hover img {
+    opacity: 0;
+    transform: scale(0.9);
+}
+
+/* Pseudo-element for Hover Icon */
+.nilai .card::before {
+    content: '';
+    display: none;
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%) translateY(-10px);
+    width: 50px;
+    height: 50px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.nilai .card.running:hover::before {
+    display: block;
+    background-image: url('file_pendukung2/icons/running-blue.svg');
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+.nilai .card.hands:hover::before {
+    display: block;
+    background-image: url('file_pendukung2/icons/hands-blue.svg');
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+.nilai .card.circle:hover::before {
+    display: block;
+    background-image: url('file_pendukung2/icons/circle-blue.svg');
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+/* Contact Section */
+.contact {
+    padding: 50px 0;
+    background: url('file_pendukung2/bg-call.webp') no-repeat center center/cover;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-content {
+    text-align: center;
+}
+
+.contact h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.contact-details {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+}
+
+.contact-details img {
+    width: 24px;
+    height: 24px;
+}
+
+.contact button {
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    background-color: #0053ba;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.contact button:hover {
+    background-color: #003d8f;
+}
+
+/* Footer */
+/* Footer Styling */
+/* Custom Footer Styles - Scoped to footer */
+.custom-footer {
+    background-color: #f8f9fa;
+    color: rgb(67, 69, 124);
+    padding: 20px 0;
+}
+
+.custom-footer img {
+    margin-bottom: 10px;
+}
+
+/* Footer Titles */
+.footer {
+    background-color: #f8f9fa;
+    color: #343a40;
+}
+
+.footer h5 {
+    font-weight: bold;
+    color: #6c757d;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #d6a62c;
+    display: inline-block;
+}
+
+.footer p {
+    color: #343a40;
+}
+
+.footer a {
+    color: #0d6efd;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.bi-telephone {
+    margin-right: 8px;
+}
+
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .tentang-kami {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .tentang-kami img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    .banner-container {
+        width: 80%;
+    }
+
+    .text-banner {
+        width: 100%;
+    }
+
+    .text-banner h1 {
+        font-size: 2.5rem;
+    }
+
+    .text-banner p {
+        font-size: 1.2rem;
+    }
+
+    .text-banner button {
+        font-size: 1rem;
+    }
+
+    .nilai .card {
+        width: 150px;
+        height: 220px;
+        margin: 0 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    nav ul {
+        width: auto;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .banner-container {
+        width: 100%;
+    }
+
+    .text-banner {
+        width: 100%;
+    }
+
+    .tentang-kami {
+        padding: 20px;
+    }
+
+    .nilai .card {
+        width: 120px;
+        height: 180px;
+    }
+}
